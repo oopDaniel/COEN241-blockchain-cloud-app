@@ -1,0 +1,52 @@
+教學link: https://blog.51cto.com/634435/2122347
+教學很多我隨意挑一篇
+
+安裝教學:
+
+	step1: 用brew安裝ethereum
+		brew tap ethereum/ethereum
+		brew install ethereum
+
+	step2: 檢查是否可以啟動
+		geth --help
+
+	step3: 建立創世模塊genesis.json, 我使用的附在資料夾裝
+
+	step4: 選擇節點資料存放路徑 --datadir, -networkid，執行初始化
+
+		ex:
+			--datadir data
+			--networkid 2019
+
+		geth --datadir data --networkid 2019 --rpc --rpccorsdomain "*" init ./genesis.json
+
+	step5: 啟動私有鍊
+
+		geth --datadir data --networkid 2019 -rpc --rpcapi="db,eth,net,web3,personal,web3" --rpccorsdomain "*" --nodiscover --port 16333 --rpcport 8546 console
+
+	step6: 創帳號, 挖礦
+
+		創帳號: personal.newAccount("password")
+		挖礦: miner.start()
+		停止挖礦: miner.stop()
+
+commands line options:
+	link: https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options
+
+geth 常用指令
+
+
+	初始化		geth --datadir data --networkid 20190520 --rpc --rpccorsdomain "*" init ./genesis.json
+
+	啟動私有鍊	geth --datadir data --networkid 20190520 -rpc --rpcapi="db,eth,net,web3,personal,web3" --rpccorsdomain "*" --nodiscover --port 16333 --rpcport 8546 console
+
+	創帳號				personal.newAccount("password")
+	unlock帳號			personal.unlockAccount("address", "password")
+	查帳號list			eth.accounts
+	查block個數			eth.blockNumber
+	查現在是用哪個帳號挖礦	eth.coinbase
+	查block資料			eth.getBlock(number)
+	查pending交易			eth.pendingTransactions
+	更換帳號挖礦			miner.setEtherbase("address")
+	挖礦					miner.start()
+	停止挖礦				miner.stop()

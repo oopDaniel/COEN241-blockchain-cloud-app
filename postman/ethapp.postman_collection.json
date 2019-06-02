@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "e316e561-eb31-4a43-8f1f-aaee33e526b5",
+		"name": "ethapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "contract",
+					"item": [
+						{
+							"name": "getAccountList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/api/contract/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"contract",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAccountBalance",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/api/contract/0xc8ab10b020930c5ecdca262c10f8c663ccce2159",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"contract",
+										"0xc8ab10b020930c5ecdca262c10f8c663ccce2159"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Account transfer eth",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "toAddr",
+											"value": "0x8cb875beccc8658ae00e04e43fcc37bbacda59fe",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "52099",
+											"type": "text"
+										},
+										{
+											"key": "value",
+											"value": "10",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/api/contract/0xc8ab10b020930c5ecdca262c10f8c663ccce2159",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"contract",
+										"0xc8ab10b020930c5ecdca262c10f8c663ccce2159"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "BetMininum",
+					"item": [
+						{
+							"name": "getGameStatus",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/api/game",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"game"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAccountStatus",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/api/game/0xc8ab10b020930c5ecdca262c10f8c663ccce2159",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"game",
+										"0xc8ab10b020930c5ecdca262c10f8c663ccce2159"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "bet",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "password",
+											"value": "52299",
+											"type": "text"
+										},
+										{
+											"key": "number",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "value",
+											"value": "10",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/api/game/0x8cb875beccc8658ae00e04e43fcc37bbacda59fe",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"game",
+										"0x8cb875beccc8658ae00e04e43fcc37bbacda59fe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "distribute",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "password",
+											"value": "52499",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/api/game/0x46f116003fd3fa745d5d8249d47208969a3a27d6/distribute",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"game",
+										"0x46f116003fd3fa745d5d8249d47208969a3a27d6",
+										"distribute"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}
