@@ -136,7 +136,7 @@
 							"response": []
 						},
 						{
-							"name": "getAccountStatus",
+							"name": "getBetStatus",
 							"request": {
 								"method": "GET",
 								"header": [],
