@@ -1,0 +1,6 @@
+[submodule "app"]
+	path = app
+	url = git@github.com:james868198/ethapp-BetMinimum.git
+[submodule "client"]
+	path = client
+	url = git@github.com:oopDaniel/COEN241-blockchain-cloud-app-client.git
