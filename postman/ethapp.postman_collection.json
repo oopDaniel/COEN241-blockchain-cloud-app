@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e316e561-eb31-4a43-8f1f-aaee33e526b5",
+		"_postman_id": "ae297b21-0f8b-4040-89b3-d4535b72ece2",
 		"name": "ethapp",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -16,10 +16,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "localhost:3000/api/contract/",
 									"host": [
@@ -40,10 +36,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "localhost:3000/api/contract/0xc8ab10b020930c5ecdca262c10f8c663ccce2159",
 									"host": [
@@ -105,6 +97,26 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "createAccount",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/contract/account",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"contract",
+										"account"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"_postman_isSubFolder": true
@@ -117,10 +129,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "localhost:3000/api/game",
 									"host": [
@@ -140,10 +148,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "localhost:3000/api/game/0xc8ab10b020930c5ecdca262c10f8c663ccce2159",
 									"host": [
@@ -155,6 +159,17 @@
 										"game",
 										"0xc8ab10b020930c5ecdca262c10f8c663ccce2159"
 									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getPrevGameStatus",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
 								}
 							},
 							"response": []
