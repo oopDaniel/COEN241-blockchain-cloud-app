@@ -21,3 +21,4 @@ yarn-error.log*
 *.sw?
 
 blockchain/data
+demo_node.md
